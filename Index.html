@@ -1,36 +1,31 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Presentación personal</title>
+    <title>Presentación personal - Keiver Castellanos</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <nav id="menu">
-      <button
-        id="theme-toggle"
-        aria-label="Cambiar tema"
-        style="float: right; margin: 8px"
-      >
-        <span id="theme-icon">🌙</span>
-      </button>
+    <nav id="menu" aria-label="Menú de navegación">
       <ul>
         <li><a href="#presentacion">Presentación</a></li>
         <li><a href="#avatar">Avatar</a></li>
-        <li><a href="#estudios">Estudios</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
         <li><a href="#contacto">Contacto</a></li>
       </ul>
+      <button id="theme-toggle" aria-label="Cambiar tema">
+        <span id="theme-icon">🌙</span>
+      </button>
     </nav>
+
     <header id="presentacion">
-      <h1>Keiver Esneid Castellanos Julio</h1>
-      <p>
-        Soy un estudiante de ingeniería de sistemas, actualmente cursando el 7mo
-        semestre.
-      </p>
-      <figure>
+      <div class="header-texto">
+        <h1>Keiver Esneid Castellanos Julio</h1>
+        <p>Estudiante de Ingeniería de Sistemas — 7mo semestre</p>
+      </div>
+      <figure id="avatar">
         <img
-          id="avatar"
           src="img/avatar.jpg"
           alt="Avatar de Keiver Esneid Castellanos Julio"
         />
@@ -39,58 +34,544 @@
         </figcaption>
       </figure>
     </header>
-    <section id="quiensoy">
-      <h2>¿Quién soy?</h2>
-      <p>
-        Soy un estudiante apasionado por la tecnologia, actualmente estoy
-        estudiando en la Universidad de Santander, en el programa de ingenieria
-        de sistemas. Me gusta aprender cosas nuevas y enfrentar retos que me
-        permitan crecer como profesional y como persona.
-      </p>
-      <ul>
-        <li>Ciudad de Cúcuta, Nte de Santander</li>
-        <li>7mo semestre</li>
-        <li>Ingenieria de Sistemas</li>
-        <li>20 años de edad</li>
-        <li>Intereses: Tecnología, programación, videojuegos</li>
-      </ul>
-      <section id="datoscuriosos">
-        <h3>Datos curiosos</h3>
+
+    <main>
+      <section id="quiensoy" aria-labelledby="titulo-quiensoy">
+        <h2 id="titulo-quiensoy">¿Quién soy?</h2>
         <p>
-          Me gusta mucho la música, de cualquier tipo menos vallenato, soy un
-          fanatico de las carreas de cualquier tipo, especialmente la Formula 1
-          y me gusta mucho la comida italiana .
+          Soy un estudiante apasionado por la tecnología, actualmente cursando
+          Ingeniería de Sistemas en la Universidad de Santander. Me gusta
+          aprender cosas nuevas y enfrentar retos que me permitan crecer como
+          profesional y como persona.
         </p>
+
+        <ul aria-label="Datos personales">
+          <li>Ciudad: Cúcuta, Nte. de Santander</li>
+          <li>Semestre: 7mo</li>
+          <li>Carrera: Ingeniería de Sistemas</li>
+          <li>Edad: 20 años</li>
+          <li>Intereses: Tecnología, programación, videojuegos</li>
+        </ul>
+
+        <section id="datoscuriosos" aria-labelledby="titulo-curiosos">
+          <h3 id="titulo-curiosos">Datos curiosos</h3>
+          <p>
+            Me gusta la música de todo tipo (menos vallenato), soy fanático de
+            las carreras — especialmente la Fórmula 1 — y disfruto mucho la
+            comida italiana.
+          </p>
+        </section>
+
+        <div id="dominios" role="region" aria-label="Nivel de dominio técnico">
+          <h3>Nivel de dominio en distintas áreas</h3>
+
+          <div class="skill">
+            <label for="java">Java</label>
+            <progress
+              id="java"
+              value="70"
+              max="100"
+              aria-valuenow="70"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></progress>
+            <span>70%</span>
+          </div>
+          <div class="skill">
+            <label for="html">HTML</label>
+            <progress
+              id="html"
+              value="90"
+              max="100"
+              aria-valuenow="90"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></progress>
+            <span>90%</span>
+          </div>
+          <div class="skill">
+            <label for="css">CSS</label>
+            <progress
+              id="css"
+              value="75"
+              max="100"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></progress>
+            <span>75%</span>
+          </div>
+          <div class="skill">
+            <label for="python">Python</label>
+            <progress
+              id="python"
+              value="75"
+              max="100"
+              aria-valuenow="75"
+              aria-valuemin="0"
+              aria-valuemax="100"
+            ></progress>
+            <span>75%</span>
+          </div>
+        </div>
+
+        <div id="contenido-oculto" style="display: none" aria-hidden="true">
+          <pre class="poema">
+O Captain! my Captain! our fearful trip is done,
+The ship has weather'd every rack, the prize we sought is won,
+The port is near, the bells I hear, the people all exulting,
+While follow eyes the steady keel, the vessel grim and daring;
+                     But O heart! heart! heart!
+                        O the bleeding drops of red,
+                           Where on the deck my Captain lies,
+                              Fallen cold and dead.
+
+O Captain! my Captain! rise up and hear the bells;
+Rise up—for you the flag is flung—for you the bugle trills,
+For you bouquets and ribbon'd wreaths—for you the shores a-crowding,
+For you they call, the swaying mass, their eager faces turning;
+                     Here Captain! dear father!
+                        This arm beneath your head!
+                           It is some dream that on the deck,
+                             You've fallen cold and dead.
+
+My Captain does not answer, his lips are pale and still,
+My father does not feel my arm, he has no pulse nor will,
+The ship is anchor'd safe and sound, its voyage closed and done,
+From fearful trip the victor ship comes in with object won;
+                     Exult O shores, and ring O bells!
+                        But I with mournful tread,
+                           Walk the deck my Captain lies,
+                              Fallen cold and dead.</pre
+          >
+        </div>
+        <button id="btn-leer" onclick="toggleTexto()" aria-expanded="false">
+          Leer más
+        </button>
       </section>
-      <div id="dominios">
-        <h3>Nivel de dominio en distintas áreas</h3>
-        <div class="skill">
-          <label for="java">Java</label>
-          <progress id="java" value="70" max="100"></progress> 80%
+
+      <section id="habilidades" aria-labelledby="titulo-habilidades">
+        <h2 id="titulo-habilidades">Habilidades e Intereses</h2>
+
+        <div id="filtros" role="group" aria-label="Filtrar por categoría">
+          <button class="filtro activo" data-categoria="todos">Todos</button>
+          <button class="filtro" data-categoria="tecnico">Técnico</button>
+          <button class="filtro" data-categoria="herramienta">
+            Herramientas
+          </button>
+          <button class="filtro" data-categoria="hobby">Pasatiempos</button>
         </div>
-        <div class="skill">
-          <label for="html">HTML</label>
-          <progress id="html" value="90" max="100"></progress> 90%
+
+        <p id="contador-tarjetas" aria-live="polite">
+          Mostrando <strong id="num-tarjetas">6</strong> elemento(s)
+        </p>
+
+        <div id="grid-habilidades" role="list">
+          <article class="tarjeta" data-categoria="tecnico" role="listitem">
+            <div class="tarjeta-icono" aria-hidden="true">☕</div>
+            <h3 class="tarjeta-nombre">Java</h3>
+            <p class="tarjeta-desc">
+              Lenguaje principal de mis cursos. Programación orientada a
+              objetos, estructuras de datos y algoritmos.
+            </p>
+            <span class="tarjeta-badge">Técnico</span>
+          </article>
+
+          <article class="tarjeta" data-categoria="tecnico" role="listitem">
+            <div class="tarjeta-icono" aria-hidden="true">🐍</div>
+            <h3 class="tarjeta-nombre">Python</h3>
+            <p class="tarjeta-desc">
+              Usado para scripting, automatización de tareas y primeros pasos en
+              análisis de datos.
+            </p>
+            <span class="tarjeta-badge">Técnico</span>
+          </article>
+
+          <article class="tarjeta" data-categoria="tecnico" role="listitem">
+            <div class="tarjeta-icono" aria-hidden="true">🌐</div>
+            <h3 class="tarjeta-nombre">HTML & CSS</h3>
+            <p class="tarjeta-desc">
+              Maquetación web semántica y estilos responsivos. Base del
+              desarrollo frontend moderno.
+            </p>
+            <span class="tarjeta-badge">Técnico</span>
+          </article>
+
+          <article class="tarjeta" data-categoria="herramienta" role="listitem">
+            <div class="tarjeta-icono" aria-hidden="true">🐙</div>
+            <h3 class="tarjeta-nombre">Git & GitHub</h3>
+            <p class="tarjeta-desc">
+              Control de versiones para proyectos académicos y colaboración en
+              equipo con repositorios remotos.
+            </p>
+            <span class="tarjeta-badge">Herramientas</span>
+          </article>
+
+          <article class="tarjeta" data-categoria="hobby" role="listitem">
+            <div class="tarjeta-icono" aria-hidden="true">🏎️</div>
+            <h3 class="tarjeta-nombre">Fórmula 1</h3>
+            <p class="tarjeta-desc">
+              Fanático de las carreras de alto rendimiento. Sigo cada temporada,
+              equipos, estrategias y pilotos.
+            </p>
+            <span class="tarjeta-badge">Pasatiempo</span>
+          </article>
+
+          <article class="tarjeta" data-categoria="hobby" role="listitem">
+            <div class="tarjeta-icono" aria-hidden="true">🎮</div>
+            <h3 class="tarjeta-nombre">Videojuegos</h3>
+            <p class="tarjeta-desc">
+              Aficionado a los videojuegos como forma de entretenimiento,
+              competencia y exploración de mundos virtuales.
+            </p>
+            <span class="tarjeta-badge">Pasatiempo</span>
+          </article>
         </div>
-        <div class="skill">
-          <label for="css">CSS</label>
-          <progress id="css" value="75" max="100"></progress> 75%
+      </section>
+      <section id="contacto" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <p class="contacto-intro">
+          ¿Tienes alguna pregunta o propuesta? Escríbeme y te respondo pronto.
+        </p>
+
+        <div class="contacto-grid">
+          <div class="contacto-formulario">
+            <form
+              id="form-contacto"
+              novalidate
+              aria-label="Formulario de contacto"
+            >
+              <div class="campo-grupo">
+                <label for="nombre"
+                  >Nombre completo <span aria-hidden="true">*</span></label
+                >
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  placeholder="Ej. Keiver Julio"
+                  autocomplete="name"
+                  aria-required="true"
+                  aria-describedby="error-nombre"
+                />
+                <span
+                  class="error-msg"
+                  id="error-nombre"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="correo"
+                  >Correo electrónico <span aria-hidden="true">*</span></label
+                >
+                <input
+                  type="email"
+                  id="correo"
+                  name="correo"
+                  placeholder="Ej. keiver@algo.com"
+                  autocomplete="email"
+                  aria-required="true"
+                  aria-describedby="error-correo"
+                />
+                <span
+                  class="error-msg"
+                  id="error-correo"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="asunto"
+                  >Asunto <span aria-hidden="true">*</span></label
+                >
+                <input
+                  type="text"
+                  id="asunto"
+                  name="asunto"
+                  placeholder="Ej. Consulta sobre proyecto"
+                  aria-required="true"
+                  aria-describedby="error-asunto"
+                />
+                <span
+                  class="error-msg"
+                  id="error-asunto"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <div class="campo-grupo">
+                <label for="mensaje"
+                  >Mensaje <span aria-hidden="true">*</span></label
+                >
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  rows="5"
+                  placeholder="Escribe tu mensaje aquí..."
+                  aria-required="true"
+                  aria-describedby="error-mensaje"
+                ></textarea>
+                <span
+                  class="error-msg"
+                  id="error-mensaje"
+                  role="alert"
+                  aria-live="polite"
+                ></span>
+              </div>
+
+              <button type="submit" id="btn-enviar">Enviar mensaje</button>
+            </form>
+
+            <div
+              id="confirmacion"
+              class="confirmacion"
+              style="display: none"
+              role="status"
+              aria-live="polite"
+            >
+              <span class="confirmacion-icono">✅</span>
+              <p id="confirmacion-texto"></p>
+            </div>
+          </div>
+
+          <aside
+            class="contacto-lateral"
+            aria-label="Información de contacto adicional"
+          >
+            <div class="redes">
+              <h3>Encuéntrame en</h3>
+              <ul class="redes-lista" role="list">
+                <li>
+                  <a
+                    href="https://github.com/KeiverJ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="red-btn github"
+                    aria-label="GitHub de Keiver (abre en nueva pestaña)"
+                  >
+                    <span class="red-icono" aria-hidden="true">🐙</span>
+                    <span class="red-nombre">GitHub</span>
+                    <span class="red-usuario">@KeiverJ</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://linkedin.com/in/keiver-castellanos"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="red-btn linkedin"
+                    aria-label="LinkedIn de Keiver (abre en nueva pestaña)"
+                  >
+                    <span class="red-icono" aria-hidden="true">💼</span>
+                    <span class="red-nombre">LinkedIn</span>
+                    <span class="red-usuario">Keiver Castellanos</span>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://instagram.com/__keiver"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="red-btn instagram"
+                    aria-label="Instagram de Keiver (abre en nueva pestaña)"
+                  >
+                    <span class="red-icono" aria-hidden="true">📸</span>
+                    <span class="red-nombre">Instagram</span>
+                    <span class="red-usuario">@__keiver</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div class="ubicacion">
+              <h3>Mi ubicación</h3>
+              <div class="mapa-contenedor">
+                <img
+                  src="img/mapa.jpg"
+                  alt="Mapa de Cúcuta, Norte de Santander, Colombia"
+                />
+              </div>
+              <p class="ubicacion-texto">
+                📍 Cúcuta, Norte de Santander — Colombia
+              </p>
+            </div>
+          </aside>
         </div>
-        <div class="skill">
-          <label for="python">Python</label>
-          <progress id="python" value="75" max="100"></progress> 85%
+      </section>
+    </main>
+
+    <footer id="pie-pagina">
+      <div class="footer-contenido">
+        <div class="footer-identidad">
+          <p class="footer-nombre">Keiver Esneid Castellanos Julio</p>
+          <p class="footer-anio">© <span id="anio-actual"></span></p>
         </div>
+
+        <blockquote class="footer-frase">
+          <p>«Debemos alcanzar las estrellas, no quedarnos mirándolas.»</p>
+          <cite>— Interstellar (2014)</cite>
+        </blockquote>
+
+        <nav aria-label="Navegación del footer">
+          <ul class="footer-nav">
+            <li><a href="#presentacion">Presentación</a></li>
+            <li><a href="#avatar">Avatar</a></li>
+            <li><a href="#habilidades">Habilidades</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
       </div>
-    </section>
+
+      <a
+        href="#"
+        id="btn-top"
+        aria-label="Volver al inicio de la página"
+        title="Volver arriba"
+      >
+        ↑
+      </a>
+    </footer>
     <script>
       const toggleBtn = document.getElementById("theme-toggle");
       const icon = document.getElementById("theme-icon");
+
       toggleBtn.addEventListener("click", () => {
         document.body.classList.toggle("dark-theme");
-        icon.textContent = document.body.classList.contains("dark-theme")
-          ? "☀️"
-          : "🌙";
+        const isDark = document.body.classList.contains("dark-theme");
+        icon.textContent = isDark ? "☀️" : "🌙";
       });
+
+      function toggleTexto() {
+        const content = document.getElementById("contenido-oculto");
+        const btn = document.getElementById("btn-leer");
+        const visible = content.style.display !== "none";
+
+        content.style.display = visible ? "none" : "block";
+        content.setAttribute("aria-hidden", visible ? "true" : "false");
+        btn.setAttribute("aria-expanded", visible ? "false" : "true");
+        btn.textContent = visible ? "Leer más" : "Leer menos";
+      }
+
+      const botonesFiltro = document.querySelectorAll(".filtro");
+      const tarjetas = document.querySelectorAll(".tarjeta");
+      const numTarjetas = document.getElementById("num-tarjetas");
+
+      botonesFiltro.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          botonesFiltro.forEach((b) => b.classList.remove("activo"));
+          btn.classList.add("activo");
+
+          const categoria = btn.dataset.categoria;
+          let visibles = 0;
+
+          tarjetas.forEach((tarjeta) => {
+            const coincide =
+              categoria === "todos" || tarjeta.dataset.categoria === categoria;
+            tarjeta.classList.toggle("oculta", !coincide);
+            if (coincide) visibles++;
+          });
+
+          numTarjetas.textContent = visibles;
+        });
+      });
+
+      const formContacto = document.getElementById("form-contacto");
+
+      function validarCampo(campo) {
+        const id = campo.id;
+        const valor = campo.value.trim();
+        const errorEl = document.getElementById("error-" + id);
+        let mensaje = "";
+
+        if (id === "nombre") {
+          mensaje = validarNombre(valor);
+        } else if (id === "correo") {
+          mensaje = validarCorreo(valor);
+        } else if (id === "asunto") {
+          mensaje = validarAsunto(valor);
+        } else if (id === "mensaje") {
+          mensaje = validarMensaje(valor);
+        }
+
+        errorEl.textContent = mensaje;
+        campo.classList.toggle("invalido", !!mensaje);
+        campo.classList.toggle("valido", !mensaje && !!valor);
+        return !mensaje;
+      }
+
+      function validarNombre(valor) {
+        if (!valor) return "El nombre no puede estar vacío.";
+        return "";
+      }
+
+      function validarCorreo(valor) {
+        if (!valor) return "El correo es obligatorio.";
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(valor)) {
+          return "Ingresa un correo válido (ej. usuario@dominio.com).";
+        }
+        return "";
+      }
+
+      function validarAsunto(valor) {
+        if (!valor) return "El asunto es obligatorio.";
+        if (valor.length < 5)
+          return "El asunto debe tener al menos 5 caracteres.";
+        return "";
+      }
+
+      function validarMensaje(valor) {
+        if (!valor) return "El mensaje es obligatorio.";
+        if (valor.length < 20)
+          return "El mensaje debe tener al menos 20 caracteres.";
+        return "";
+      }
+
+      ["nombre", "correo", "asunto", "mensaje"].forEach((id) => {
+        const campo = document.getElementById(id);
+        campo.addEventListener("input", () => validarCampo(campo));
+      });
+
+      formContacto.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        const campos = ["nombre", "correo", "asunto", "mensaje"];
+        const validos = campos.map((id) =>
+          validarCampo(document.getElementById(id)),
+        );
+
+        if (validos.every(Boolean)) {
+          const nombre = document.getElementById("nombre").value.trim();
+
+          const confirmacion = document.getElementById("confirmacion");
+          document.getElementById("confirmacion-texto").textContent =
+            `¡Gracias por tu mensaje, ${nombre}! Te responderé a la brevedad posible.`;
+          confirmacion.style.display = "flex";
+
+          formContacto.reset();
+          campos.forEach((id) => {
+            const el = document.getElementById(id);
+            el.classList.remove("valido", "invalido");
+          });
+
+          setTimeout(() => {
+            confirmacion.style.display = "none";
+          }, 6000);
+        }
+      });
+
+      document.getElementById("anio-actual").textContent =
+        new Date().getFullYear();
+
+      document
+        .getElementById("btn-top")
+        .addEventListener("click", function (e) {
+          e.preventDefault();
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
     </script>
   </body>
 </html>
