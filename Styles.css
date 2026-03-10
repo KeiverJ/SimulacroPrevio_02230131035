@@ -1,6 +1,3 @@
-/* ===========================
-   Variables
-=========================== */
 :root {
   --azul: #1a56a0;
   --azul-suave: #e8f0fa;
@@ -11,10 +8,6 @@
   --blanco: #ffffff;
   --radio: 8px;
 }
-
-/* ===========================
-   Reset y base
-=========================== */
 *,
 *::before,
 *::after {
@@ -39,9 +32,6 @@ body {
   line-height: 1.7;
 }
 
-/* ===========================
-   Tipografía
-=========================== */
 h1 {
   font-size: 2em;
   font-weight: 700;
@@ -64,18 +54,12 @@ p {
   margin-bottom: 0.9em;
 }
 
-/* ===========================
-   Layout general
-=========================== */
 .contenedor {
   width: 90%;
   max-width: 1000px;
   margin: 0 auto;
 }
 
-/* ===========================
-   Navegación
-=========================== */
 nav#menu {
   position: sticky;
   top: 0;
@@ -116,9 +100,6 @@ nav#menu a:hover {
   line-height: 1;
 }
 
-/* ===========================
-   Header / Hero
-=========================== */
 header#presentacion {
   background: var(--blanco);
   padding: 4em 5% 3em;
@@ -166,9 +147,6 @@ figcaption {
   color: var(--suave);
 }
 
-/* ===========================
-   Main
-=========================== */
 main {
   width: 90%;
   max-width: 1000px;
@@ -179,19 +157,6 @@ main {
   gap: 2.5em;
 }
 
-/* ===========================
-   Secciones — sin cajitas
-=========================== */
-main > section {
-  background: var(--blanco);
-  border-radius: var(--radio);
-  padding: 2em 2.5em;
-  border: 1px solid var(--borde);
-}
-
-/* ===========================
-   Quién soy
-=========================== */
 #quiensoy ul {
   list-style: none;
   display: flex;
@@ -298,9 +263,6 @@ main > section {
   color: var(--blanco);
 }
 
-/* ===========================
-   Habilidades
-=========================== */
 #filtros {
   display: flex;
   flex-wrap: wrap;
@@ -394,9 +356,6 @@ main > section {
   display: none;
 }
 
-/* ===========================
-   Contacto
-=========================== */
 .contacto-intro {
   font-size: 0.92em;
   margin-bottom: 1.5em;
@@ -581,9 +540,6 @@ main > section {
   text-align: center;
 }
 
-/* ===========================
-   Footer
-=========================== */
 footer#pie-pagina {
   background: var(--azul);
   color: var(--blanco);
@@ -675,9 +631,6 @@ footer#pie-pagina {
   transform: translateY(-2px);
 }
 
-/* ===========================
-   Tema oscuro
-=========================== */
 .dark-theme {
   --fondo: #141414;
   --blanco: #1e1e1e;
@@ -710,9 +663,6 @@ footer#pie-pagina {
   background: #0d1520;
 }
 
-/* ===========================
-   Responsive
-=========================== */
 @media (max-width: 768px) {
   header#presentacion {
     flex-direction: column-reverse;
