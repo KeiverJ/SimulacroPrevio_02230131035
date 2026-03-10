@@ -4,14 +4,93 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Presentación personal</title>
+    <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header>
+    <nav id="menu">
+      <button
+        id="theme-toggle"
+        aria-label="Cambiar tema"
+        style="float: right; margin: 8px"
+      >
+        <span id="theme-icon">🌙</span>
+      </button>
+      <ul>
+        <li><a href="#presentacion">Presentación</a></li>
+        <li><a href="#avatar">Avatar</a></li>
+        <li><a href="#estudios">Estudios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <header id="presentacion">
       <h1>Keiver Esneid Castellanos Julio</h1>
       <p>
         Soy un estudiante de ingeniería de sistemas, actualmente cursando el 7mo
         semestre.
       </p>
+      <figure>
+        <img
+          id="avatar"
+          src="img/avatar.jpg"
+          alt="Avatar de Keiver Esneid Castellanos Julio"
+        />
+        <figcaption>
+          Avatar NFT de Keiver, creado por un artista digital.
+        </figcaption>
+      </figure>
     </header>
+    <section id="quiensoy">
+      <h2>¿Quién soy?</h2>
+      <p>
+        Soy un estudiante apasionado por la tecnologia, actualmente estoy
+        estudiando en la Universidad de Santander, en el programa de ingenieria
+        de sistemas. Me gusta aprender cosas nuevas y enfrentar retos que me
+        permitan crecer como profesional y como persona.
+      </p>
+      <ul>
+        <li>Ciudad de Cúcuta, Nte de Santander</li>
+        <li>7mo semestre</li>
+        <li>Ingenieria de Sistemas</li>
+        <li>20 años de edad</li>
+        <li>Intereses: Tecnología, programación, videojuegos</li>
+      </ul>
+      <section id="datoscuriosos">
+        <h3>Datos curiosos</h3>
+        <p>
+          Me gusta mucho la música, de cualquier tipo menos vallenato, soy un
+          fanatico de las carreas de cualquier tipo, especialmente la Formula 1
+          y me gusta mucho la comida italiana .
+        </p>
+      </section>
+      <div id="dominios">
+        <h3>Nivel de dominio en distintas áreas</h3>
+        <div class="skill">
+          <label for="java">Java</label>
+          <progress id="java" value="70" max="100"></progress> 80%
+        </div>
+        <div class="skill">
+          <label for="html">HTML</label>
+          <progress id="html" value="90" max="100"></progress> 90%
+        </div>
+        <div class="skill">
+          <label for="css">CSS</label>
+          <progress id="css" value="75" max="100"></progress> 75%
+        </div>
+        <div class="skill">
+          <label for="python">Python</label>
+          <progress id="python" value="75" max="100"></progress> 85%
+        </div>
+      </div>
+    </section>
+    <script>
+      const toggleBtn = document.getElementById("theme-toggle");
+      const icon = document.getElementById("theme-icon");
+      toggleBtn.addEventListener("click", () => {
+        document.body.classList.toggle("dark-theme");
+        icon.textContent = document.body.classList.contains("dark-theme")
+          ? "☀️"
+          : "🌙";
+      });
+    </script>
   </body>
 </html>

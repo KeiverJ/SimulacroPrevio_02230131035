@@ -1,0 +1,92 @@
+#menu {
+  position: sticky;
+  top: 0;
+  background: #f9feff;
+  z-index: 100;
+  padding: 0.5em 1em;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 1em;
+}
+
+#menu a {
+  text-decoration: none;
+  color: #000000;
+  font-weight: 500;
+}
+
+#menu a:hover {
+  color: #007bff;
+}
+
+#theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  background: #ffffff;
+  color: #222;
+}
+
+header {
+  padding: 2em 1em 1em 1em;
+  background: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+figure {
+  margin: 1em 0;
+  text-align: center;
+}
+
+img#avatar {
+  width: 150px;
+  height: 150px;
+  border-radius: 30%;
+  border: 3px solid #007bff;
+}
+
+figcaption {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.dark-theme {
+  background: #222;
+  color: #f9f9f9;
+}
+
+.dark-theme #menu {
+  background: #333;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dark-theme #menu a {
+  color: #f9f9f9;
+}
+
+.dark-theme #menu a:hover {
+  color: #ffd600;
+}
+
+.dark-theme header {
+  background: #444;
+  border-bottom: 1px solid #222;
+}
+
+.dark-theme figcaption {
+  color: #bbb;
+}
